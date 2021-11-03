@@ -5,11 +5,11 @@ const { Schema } = mongoose
 const urlSchema = new Schema({
     original_URL: {
       type: String,
-      required: true
+      required: true,
     },
     shortened_URL: {
       type: String,
-      required: true
+      required: true,
     }
   }, 
   { timestamps: { createdAt: 'created_at' } }
