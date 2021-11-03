@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-frame {
+  /* outline: 1px solid tomato; */
+  margin-top: 25vh;
+  padding: 20px;
+  height: 350px;
+  background: aliceblue;
+  box-shadow: -5px 5px 10px 5px lightgrey;
+  border-radius: 10px;
+}
