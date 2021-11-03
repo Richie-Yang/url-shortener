@@ -2,6 +2,9 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 
+// Import and directly run mongoose config
+require('./config/mongoose')
+
 // Initialize Express framework
 const app = express()
 const port = 3000
