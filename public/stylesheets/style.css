@@ -11,7 +11,8 @@ html, body {
   /* outline: 1px solid tomato; */
   margin-top: 25vh;
   padding: 20px;
-  height: 350px;
+  min-height: 350px;
+  min-width: 200px;
   background: aliceblue;
   box-shadow: -5px 5px 10px 5px lightgrey;
   border-radius: 10px;
