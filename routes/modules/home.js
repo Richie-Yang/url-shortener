@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
 router.get('/:redirect_index', (req, res) => {
   const redirectIndex = req.params.redirect_index
 
+  // find corresponding original_URL and redirect
   return URL.findOne({ redirect_index: redirectIndex })
     .then(url => res.redirect(url.original_URL))
     .catch(error => console.log(error))
@@ -23,12 +24,15 @@ router.get('/:redirect_index', (req, res) => {
 router.post('/', (req, res) => {
   const original_URL = req.body.url
 
+  // first check if original_URL already exists
   return URL.findOne({ original_URL })
     .then(url => {
+      // if not exist, following script will be run
       if (!url) {
         const host = req.headers.host
         let redirect_index = generateRandomIndex()
 
+        // trying to do loop check for redirect_index until no duplication found
         URL.find()
           .then(urls => {
             while (urls.some(item => item.redirect_index === redirect_index)) {
@@ -37,10 +41,10 @@ router.post('/', (req, res) => {
             const shortened_URL = `http://${host}/${redirect_index}`
             return new URL({ original_URL, shortened_URL, redirect_index }).save()
           })
-          .then(newURL => res.redirect(`/urls/${newURL.id}`))
+          .then(newURL => res.redirect(`/urls/${newURL.id}`)) // redirect
           .catch(error => console.log(error))
 
-      } else res.redirect(`/urls/${url.id}`)
+      } else res.redirect(`/urls/${url.id}`) // if exist, then redirect
     })
     .catch(error => console.log(error))
 })

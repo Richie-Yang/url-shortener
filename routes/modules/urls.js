@@ -8,6 +8,7 @@ const URL = require('../../models/url')
 router.get('/:url_id', (req, res) => {
   const id = req.params.url_id
 
+  // find corresponding object and render it
   return URL.findById(id)
     .lean()
     .then(url => res.render('result', { url }))
