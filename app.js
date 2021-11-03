@@ -2,6 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 
+const routes = require('./routes')
 // Import and directly run mongoose config
 require('./config/mongoose')
 
@@ -14,18 +15,7 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
 app.use(bodyParser.urlencoded({ extended: true }))
-
-
-////// Routing Section Starts Here //////
-app.get('/', (req, res) => {
-  res.render('index')
-})
-
-app.post('/', (req, res) => {
-  console.log(req.body.url)
-  res.render('result', { result: req.body.url })
-})
-////// Routing Section Ends Here //////
+app.use(routes)
 
 
 // Start Express server 
