@@ -22,7 +22,8 @@ router.get('/:redirect_index', (req, res) => {
 
 // POST to both convert URL and save it to DB (Create in CRUD operation)
 router.post('/', (req, res) => {
-  const original_URL = req.body.url
+  const original_URL = req.body.url.trim()
+  if (!original_URL.length) res.redirect('/')
 
   // first check if original_URL already exists
   return URL.findOne({ original_URL })

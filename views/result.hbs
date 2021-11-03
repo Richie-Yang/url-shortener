@@ -1,12 +1,9 @@
 <h4 class="mb-2">Success! Please use this link:</h4>
-
 <div class="input-group">
   <a class="btn btn-info text-light" href="{{url.shortened_URL}}" target="_blank">Go</a>
-  <input id="output-url" type="text" class="form-control" value="{{url.shortened_URL}}" disabled>
-  <button id="copy-button" class="btn btn-primary" type="button" data-bs-container="body" data-bs-toggle="popover"
-    data-bs-placement="bottom" data-bs-content="Copied">Copy</button>
+  <input id="output-url" type="url" class="form-control" value="{{url.shortened_URL}}" disabled>
+  <button id="copy-button" class="btn btn-primary" type="button">Copy</button>
 </div>
-
 <a class="btn btn-outline-secondary w-50 my-3" href="/">Back</a>
 
 
