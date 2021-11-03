@@ -10,9 +10,13 @@ const urlSchema = new Schema({
     shortened_URL: {
       type: String,
       required: true,
+    },
+    redirect_index: {
+      type: String,
+      require: true
     }
   }, 
-  { timestamps: { createdAt: 'created_at' } }
+  { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } }
 )
 
 

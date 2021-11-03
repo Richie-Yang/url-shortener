@@ -4,6 +4,7 @@ const numbers = '1234567890'
 const collection = lowerCaseLetters + upperCaseLetters + numbers
 
 
+////// Function Section Starts Here //////
 function generateRandomIndex() {
   let shortenCode = ''
   for (let i = 1; i <= 5; i++) {
@@ -12,6 +13,7 @@ function generateRandomIndex() {
   }
   return shortenCode
 }
+////// Function Section Ends Here //////
 
 
 module.exports = generateRandomIndex
