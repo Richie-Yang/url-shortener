@@ -2,10 +2,12 @@
 
 <div class="input-group">
   <a class="btn btn-success" href="{{url.shortened_URL}}" target="_blank">Go</a>
-  <input type="text" class="form-control" aria-label="Recipient's username"
-    aria-describedby="button-addon2" value="{{url.shortened_URL}}" disabled>
-  <button class="btn btn-primary" type="button" id="button-addon2">Copy</button>
+  <input id="output-url" type="text" class="form-control" value="{{url.shortened_URL}}" disabled>
+  <button id="copy-button" class="btn btn-primary" type="button" data-bs-container="body" data-bs-toggle="popover"
+    data-bs-placement="bottom" data-bs-content="Copied">Copy</button>
 </div>
 
 <a class="btn btn-secondary w-50 my-3" href="/">Back</a>
 
+
+<script src="/javascripts/copy.js"></script>
