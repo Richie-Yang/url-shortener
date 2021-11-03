@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   console.log(req.body.url)
-  res.render('index')
+  res.render('result', { result: req.body.url })
 })
 ////// Routing Section Ends Here //////
 
