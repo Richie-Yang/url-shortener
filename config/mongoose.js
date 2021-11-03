@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/url-shortener'
 
 // Using Mongoose ODM to connect to MongoDB
-mongoose.connect('mongodb://localhost/url-shortener')
+mongoose.connect(MONGODB_URI)
 const db = mongoose.connection
 
 // Report any situation when connecting to DB

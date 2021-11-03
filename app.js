@@ -8,7 +8,7 @@ require('./config/mongoose')
 
 // Initialize Express framework
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 // Set template engine to Handlebars
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
@@ -20,6 +20,6 @@ app.use(routes)
 
 
 // Start Express server 
-app.listen(port, () => {
-  console.log(`Express server is listening on 127.0.0.1:${port}`)
+app.listen(PORT, () => {
+  console.log(`Express server is listening on 127.0.0.1:${PORT}`)
 })
