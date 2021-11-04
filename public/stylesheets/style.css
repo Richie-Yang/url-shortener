@@ -7,7 +7,10 @@ html, body {
   padding: 0;
 }
 
-.main-frame, .main-tabs {
+.main-frame, .footer-content {
+  padding: 20px;
+  min-width: 250px;
+  max-width: 750px;
   background: aliceblue;
   box-shadow: -5px 5px 10px 5px lightgrey;
   border-radius: 10px;
@@ -17,21 +20,45 @@ html, body {
   /* outline: 1px solid tomato; */
   position: relative;
   margin: 20vh 0 20vh 0;
-  padding: 20px;
   min-height: 350px;
-  min-width: 250px;
-  max-width: 750px;
 }
 
-.main-tabs {
-  /* outline: 1px solid tomato; */
-  position: absolute;
-  top: 0;
-  left: 13%;
-  z-index: -1;
-  transition: top .5s;
+footer {
+  position: fixed;
+  bottom: -75px;
+  height: 150px;
+  transition: bottom .5s;
 }
 
-.main-frame:hover > .main-tabs {
-  top: -50px;
+footer:hover {
+  bottom: -15px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.footer-arrow-signs .fa-chevron-down:nth-child(2) {
+  position: relative;
+  top: -10px;
+}
+
+.footer-social-links {
+  font-size: 1.5rem;
+}
+
+.footer-social-links .fab {
+  margin: 0 5px;
+}
+
+#footer-link-facebook {
+  color: rgb(15, 73, 233);
+}
+
+#footer-link-github {
+  color: rgb(140, 47, 158);
+}
+
+#footer-link-medium {
+  color: rgb(39, 39, 39);
 }

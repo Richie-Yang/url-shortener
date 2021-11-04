@@ -6,21 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <title>URL Shortener</title>
 </head>
 <body class="bg-light">
 
+  {{!-- main --}}
   <main class="container">
-
     <div class="main-frame mx-auto text-center">
-      <div class="main-tabs w-75 h-25">
-        <ul class="nav nav-pills nav-justified">
-          <li class="nav-item">
-            <a class="nav-link h6 mt-2" href="#">URL Management</a>
-          </li>
-        </ul>
-      </div>
       <h3 class="mt-4">URL Shortener</h3>
       <div class="w-100 mt-3 mb-5">
         <img class="d-block mx-auto w-25"
@@ -28,8 +23,25 @@
       </div>
       {{{body}}}
     </div>
-
   </main>
+
+  <!-- footer -->
+  <footer class="container-fluid">
+    <div class="footer-content text-center w-75 mx-auto">
+      <h5>Made by Richie with <i class="fas fa-heart"></i></h5>
+      <div class="footer-arrow-signs d-flex flex-column justify-content-center">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="footer-social-links">
+        <a id="footer-link-facebook" href="https://www.facebook.com/yian.yang1" target='_blank'><i
+            class="fab fa-facebook"></i></a>
+        <a id="footer-link-github" href="https://github.com/Richie-Yang" target='_blank'><i class="fab fa-github"></i></a>
+        <a id="footer-link-medium" href="https://medium.com/@richieyianyang" target='_blank'><i
+            class="fab fa-medium"></i></a>
+      </div>
+    </div>
+  </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

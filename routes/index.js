@@ -6,8 +6,8 @@ const urls = require('./modules/urls')
 
 
 ////// Routing Section Starts Here //////
-router.use('/', home)
 router.use('/urls', urls)
+router.use('/', home)
 ////// Routing Section Ends Here //////
 
 
