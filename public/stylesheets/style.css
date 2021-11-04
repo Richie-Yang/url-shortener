@@ -7,13 +7,31 @@ html, body {
   padding: 0;
 }
 
-.main-frame {
-  /* outline: 1px solid tomato; */
-  margin-top: 25vh;
-  padding: 20px;
-  min-height: 350px;
-  min-width: 200px;
+.main-frame, .main-tabs {
   background: aliceblue;
   box-shadow: -5px 5px 10px 5px lightgrey;
   border-radius: 10px;
+}
+
+.main-frame {
+  /* outline: 1px solid tomato; */
+  position: relative;
+  margin: 20vh 0 20vh 0;
+  padding: 20px;
+  min-height: 350px;
+  min-width: 250px;
+  max-width: 750px;
+}
+
+.main-tabs {
+  /* outline: 1px solid tomato; */
+  position: absolute;
+  top: 0;
+  left: 13%;
+  z-index: -1;
+  transition: top .5s;
+}
+
+.main-frame:hover > .main-tabs {
+  top: -50px;
 }
