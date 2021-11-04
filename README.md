@@ -1,6 +1,6 @@
 # URL Shortener
 
-The small tool which can help you to shorten your original URL. With this tool, every time you're sharing link to your best friends, the whole chat box will never ever be occupied by your damn long URL strings. You can [try my demo on Heroku](https://github.com/Richie-Yang) before jump to the rest of my README.
+The small tool which can help you to shorten your original URL. With this tool, every time you're sharing link to your best friends, the whole chat box will never ever be occupied by your damn long URL strings. You can [try my demo on Heroku](https://xurl.herokuapp.com/) before jump to the rest of my README.
 <p align="center">
   <img src="https://github.com/Richie-Yang/url-shortener/blob/main/public/img/a8-url-shortener.gif">
 </p>
