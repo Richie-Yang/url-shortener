@@ -1,6 +1,10 @@
 # URL Shortener
 
 The small tool which can help you to shorten your original URL. With this tool, every time you're sharing link to your best friends, the whole chat box will never ever be occupied by your damn long URL strings.
+<p align="center">
+  <img src="https://github.com/Richie-Yang/url-shortener/blob/main/public/img/a8-url-shortener.gif">
+</p>
+
 
 ## Features
 1. User can convert longer URL strings to the shorter one.
@@ -50,9 +54,20 @@ PS: If you don't have nodemon installed, please check [Nodemon](https://www.npmj
 * none
 
 
+## Other Screenshots
+### index.hbs view
+![Index Page](https://github.com/Richie-Yang/url-shortener/blob/main/public/img/a8-url-shortener-index.jpg)
+### result.hbs view
+![Result Page](https://github.com/Richie-Yang/url-shortener/blob/main/public/img/a8-url-shortener-result.jpg)
+
+
 ## development tools
 - Node.js 14.16.0
 - Express 4.17.1
 - Express-Handlebars 5.3.4
 - MongoDB
 - mongoose 6.0.12
+
+
+## Contributor
+[Richie](https://github.com/Richie-Yang)
