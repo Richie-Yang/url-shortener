@@ -17,7 +17,13 @@ router.get('/:redirect_index', (req, res) => {
   // find corresponding original_URL and redirect
   return URL.findOne({ redirect_index: redirectIndex })
     .then(url => res.redirect(url.original_URL))
-    .catch(error => console.log(error))
+    .catch(error => {
+      console.log(error)
+      res.status(404).render('error', { 
+        title: '404', 
+        description: 'Result not found, please try something else, or click Back button below.' 
+      })
+    })
 })
 
 // POST to both convert URL and save it to DB (Create in CRUD operation)

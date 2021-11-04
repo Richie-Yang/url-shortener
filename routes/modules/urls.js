@@ -12,7 +12,13 @@ router.get('/:url_id', (req, res) => {
   return URL.findById(id)
     .lean()
     .then(url => res.render('result', { url }))
-    .catch(error => console.log(error))
+    .catch(error => {
+      console.log(error)
+      res.status(404).render('error', { 
+        title: '404', 
+        description: 'Result not found, please try something else, or click Back button below.' 
+      })
+    })
 })
 ////// Routing Section Ends Here //////
 

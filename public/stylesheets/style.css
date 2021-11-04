@@ -62,3 +62,7 @@ footer:hover {
 #footer-link-medium {
   color: rgb(39, 39, 39);
 }
+
+.title-danger {
+  font-size: 3rem;
+}

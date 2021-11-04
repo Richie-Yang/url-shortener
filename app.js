@@ -17,6 +17,14 @@ app.set('view engine', 'hbs')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use(routes)
+// Handling all 500 errors here
+app.use((err, req, res, next) => {
+  res.status(500).render('error', { 
+    title: '500', 
+    description: 'Something went wrong, please try again later, or click Back button below.' 
+  })
+  next(err)
+})
 
 
 // Start Express server 
