@@ -14,9 +14,9 @@ router.get('/:url_id', (req, res) => {
     .then(url => res.render('result', { url }))
     .catch(error => {
       console.log(error)
-      res.status(404).render('error', { 
-        title: '404', 
-        description: 'Result not found, please try something else, or click Back button below.' 
+      res.status(404).render('error', {
+        statusCode: '404',
+        message: 'Result not found, please try something else, or click Back button below.'
       })
     })
 })

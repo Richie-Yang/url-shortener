@@ -20,14 +20,14 @@ router.get('/:redirect_index', (req, res) => {
     .catch(error => {
       console.log(error)
       res.status(404).render('error', { 
-        title: '404', 
-        description: 'Result not found, please try something else, or click Back button below.' 
+        statusCode: '404', 
+        message: 'Result not found, please try something else, or click Back button below.' 
       })
     })
 })
 
 // POST to both convert URL and save it to DB (Create in CRUD operation)
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   const original_URL = req.body.url.trim()
   if (!original_URL.length) res.redirect('/')
 
@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
           .catch(error => console.log(error))
       } else res.redirect(`/urls/${oldURL.id}`) // if defined, then redirect
     })
-    .catch(error => console.log(error))
+    .catch(next)
 
 
   // Old code (2021/11/3)
