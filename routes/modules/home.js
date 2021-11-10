@@ -31,7 +31,6 @@ router.post('/', (req, res, next) => {
   const original_URL = req.body.url.trim()
   if (!original_URL.length) res.redirect('/')
 
-  // New code (2021/11/4)
   return URL.find()
     .then(urls => {
       const oldURL = urls.filter(item => item.original_URL === original_URL)[0]
@@ -52,32 +51,6 @@ router.post('/', (req, res, next) => {
       } else res.redirect(`/urls/${oldURL.id}`) // if defined, then redirect
     })
     .catch(next)
-
-
-  // Old code (2021/11/3)
-  // // first check if original_URL already exists
-  // return URL.findOne({ original_URL })
-  //   .then(url => {
-  //     // if not exist, following script will be run
-  //     if (!url) {
-  //       const host = req.headers.host
-  //       let redirect_index = generateRandomIndex()
-
-  //       // trying to do loop check for redirect_index until no duplication found
-  //       URL.find()
-  //         .then(urls => {
-  //           while (urls.some(item => item.redirect_index === redirect_index)) {
-  //             redirect_index = generateRandomIndex()
-  //           }
-  //           const shortened_URL = `http://${host}/${redirect_index}`
-  //           return new URL({ original_URL, shortened_URL, redirect_index }).save()
-  //         })
-  //         .then(newURL => res.redirect(`/urls/${newURL.id}`)) // redirect
-  //         .catch(error => console.log(error))
-
-  //     } else res.redirect(`/urls/${url.id}`) // if exist, then redirect
-  //   })
-  //   .catch(error => console.log(error))
 })
 ////// Routing Section Ends Here //////
 
